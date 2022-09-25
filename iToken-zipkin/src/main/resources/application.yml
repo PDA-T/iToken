@@ -1,21 +1,7 @@
 spring:
-  application:
-    name: iToken-zipkin
-  boot:
-    admin:
-      client:
-        url: http://127.0.0.1:8084
-
-server:
-  port: 9411
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
-
-management:
-  metrics:
-    web:
-      server:
-        auto-time-requests: false
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: iToken-zipkin
+      label: master
+      profile: dev

@@ -1,27 +1,7 @@
 spring:
-  application:
-    name: iToken-zuul
-  zipkin:
-    base-url: http://127.0.0.1:9411
-  boot:
-    admin:
-      client:
-        url: http://127.0.0.1:8084
-
-server:
-  port: 8769
-
-eureka:
-  client:
-    service-url:
-      defaultZone : http://127.0.0.1:8761/eureka/
-
-zuul:
-  routes:
-    api-a:
-      path: /api/a/**
-      serviceId: hello-spring-cloud-web-admin-ribbon
-    api-b:
-      path: /api/b/**
-      serviceId: hello-spring-cloud-web-admin-feign
-
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: iToken-zuul
+      label: master
+      profile: dev
