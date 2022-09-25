@@ -1,0 +1,7 @@
+.idea
+
+/iToken-eureka/target/
+/iToken-config/target/
+/iToken-admin/target/
+/iToken-zipkin/target/
+/iToken-zuul/target/
