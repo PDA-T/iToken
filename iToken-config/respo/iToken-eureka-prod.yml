@@ -2,11 +2,11 @@ spring:
   application:
     name: iToken-eureka
   zipkin:
-    base-url: http://127.0.0.1:9411
+    base-url: http://192.168.60.129:9411
   boot:
     admin:
       client:
-        url: http://127.0.0.1:8084
+        url: http://192.168.60.129:8084
 
 server:
   port: 8761
@@ -22,7 +22,7 @@ management:
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 192.168.60.129
   client:
     # 将自己注册进eureka(集群需要启用)
     register-with-eureka: true
@@ -30,4 +30,4 @@ eureka:
     fetch-registry: true
     service-url:
       # 集群多个逗号分隔
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://192.168.60.129:${server.port}/eureka/,http://192.168.60.129:${server.port}/eureka/,http://192.168.60.129:${server.port}/eureka/

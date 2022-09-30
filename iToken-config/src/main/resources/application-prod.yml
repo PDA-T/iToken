@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: iToken-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/PDA-T/iToken.git
+          search-paths: iToken-config/respo
+          username:
+          password:
+  boot:
+    admin:
+      client:
+        url: http://192.168.60.129:8084
+  zipkin:
+    base-url: http://192.168.60.129:9411
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.60.129:8761/eureka/
