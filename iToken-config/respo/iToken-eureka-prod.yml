@@ -30,4 +30,4 @@ eureka:
     fetch-registry: true
     service-url:
       # 集群多个逗号分隔
-      defaultZone: http://192.168.60.129:${server.port}/eureka/,http://192.168.60.129:${server.port}/eureka/,http://192.168.60.129:${server.port}/eureka/
+      defaultZone: http://192.168.60.129:8761/eureka/,http://192.168.60.129:8861/eureka/,http://192.168.60.129:8961/eureka/
