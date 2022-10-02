@@ -2,8 +2,9 @@
 
 /iToken-eureka/target/
 /iToken-config/target/
+/iToken-config/respo/iToken-service-admin-dev.yml
+/iToken-config/respo/iToken-service-admin-prod.yml
 /iToken-admin/target/
-/iToken-admin/src/main/resources/jdbc.properties
 /iToken-zipkin/target/
 /iToken-zuul/target/
 /iToken-service-admin/target/
