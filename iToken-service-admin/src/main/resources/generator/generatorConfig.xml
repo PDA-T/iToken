@@ -23,7 +23,7 @@
 							 type="XMLMAPPER"/>
 
 		<table tableName="tb_sys_user">
-			<generatedkey column="user_code" sqlStatement="Mysql" identity="false"/>
+			<generatedKey column="user_code" sqlStatement="Mysql" identity="false"/>
 		</table>
 	</context>
 </generatorConfiguration>
