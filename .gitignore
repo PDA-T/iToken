@@ -5,3 +5,5 @@
 /iToken-admin/target/
 /iToken-zipkin/target/
 /iToken-zuul/target/
+/iToken-service-admin/target/
+/iToken-common-service/target/
