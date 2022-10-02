@@ -10,8 +10,8 @@ spring:
   datasource:
     druid:
       url: jdbc:mysql://sh-cdb-hlkfo8mc.sql.tencentcdb.com:63962/itoken-service-admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
-      username: root
-      password: 123465
+      username: iToken
+      password: itoken123456
       initial-size: 1
       min-idle: 1
       max-active: 20
