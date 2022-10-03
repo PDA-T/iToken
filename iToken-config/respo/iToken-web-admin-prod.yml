@@ -17,6 +17,10 @@ spring:
 server:
   port: 8601
 
+feign:
+  hystrix:
+    enabled: true
+
 management:
   endpoint:
     health:
