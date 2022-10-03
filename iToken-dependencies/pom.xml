@@ -32,6 +32,7 @@
 		<mysql.version>5.1.46</mysql.version>
 		<lombok.version>1.16.18</lombok.version>
 		<guava.version>25.1-jre</guava.version>
+		<nekohtml.version>1.9.22</nekohtml.version>
 	</properties>
 
 	<dependencyManagement>
@@ -109,6 +110,12 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sourceforge.nekohtml</groupId>
+				<artifactId>nekohtml</artifactId>
+				<version>${nekohtml.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
