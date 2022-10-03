@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: iToken-web-admin
+  zipkin:
+    base-url: http://192.168.60.129:9411
+  boot:
+    admin:
+      client:
+        url: http://192.168.60.129:8084
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8601
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.60.129:8761/eureka/,http://192.168.60.129:8861/eureka/,http://192.168.60.129:8961/eureka/
