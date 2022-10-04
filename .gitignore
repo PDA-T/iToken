@@ -9,5 +9,7 @@
 /iToken-common-service/target/
 /iToken-common/target/
 /iToken-common-web/target/
+/itoken-common-domain/target/
 /iToken-web-admin/target/
 /iToken-service-redis/target/
+/iToken-service-sso/target/

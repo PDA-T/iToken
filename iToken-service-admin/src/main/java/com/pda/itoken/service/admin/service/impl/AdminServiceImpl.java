@@ -1,6 +1,6 @@
 package com.pda.itoken.service.admin.service.impl;
 
-import com.pda.itoken.service.admin.domain.TbSysUser;
+import com.pda.itoken.common.domain.TbSysUser;
 import com.pda.itoken.service.admin.mapper.TbSysUserMapper;
 import com.pda.itoken.service.admin.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;

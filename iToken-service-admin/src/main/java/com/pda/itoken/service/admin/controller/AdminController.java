@@ -1,8 +1,8 @@
 package com.pda.itoken.service.admin.controller;
 
 import com.google.common.collect.Lists;
+import com.pda.itoken.common.domain.TbSysUser;
 import com.pda.itoken.common.dto.BaseResult;
-import com.pda.itoken.service.admin.domain.TbSysUser;
 import com.pda.itoken.service.admin.service.AdminService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

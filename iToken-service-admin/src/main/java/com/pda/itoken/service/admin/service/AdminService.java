@@ -1,6 +1,6 @@
 package com.pda.itoken.service.admin.service;
 
-import com.pda.itoken.service.admin.domain.TbSysUser;
+import com.pda.itoken.common.domain.TbSysUser;
 
 /**
  * 用户Service接口

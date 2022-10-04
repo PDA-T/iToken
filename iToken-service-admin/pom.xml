@@ -20,6 +20,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.pda</groupId>
+			<artifactId>iToken-common-domain</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.pda</groupId>
 			<artifactId>iToken-common-service</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>

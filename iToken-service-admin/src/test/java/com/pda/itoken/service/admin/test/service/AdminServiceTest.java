@@ -1,7 +1,7 @@
 package com.pda.itoken.service.admin.test.service;
 
+import com.pda.itoken.common.domain.TbSysUser;
 import com.pda.itoken.service.admin.ServiceAdminApplication;
-import com.pda.itoken.service.admin.domain.TbSysUser;
 import com.pda.itoken.service.admin.service.AdminService;
 import org.junit.Assert;
 import org.junit.Test;
