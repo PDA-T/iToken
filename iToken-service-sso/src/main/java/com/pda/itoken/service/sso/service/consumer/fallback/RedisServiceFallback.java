@@ -1,10 +1,6 @@
 package com.pda.itoken.service.sso.service.consumer.fallback;
 
-import com.google.common.collect.Lists;
-import com.pda.itoken.common.constants.HttpStatusConstants;
-import com.pda.itoken.common.dto.BaseResult;
 import com.pda.itoken.common.hystrix.Fallback;
-import com.pda.itoken.common.utils.MapperUtils;
 import com.pda.itoken.service.sso.service.consumer.RedisService;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +18,7 @@ public class RedisServiceFallback implements RedisService {
 	 */
 	@Override
 	public String put(String key, String value, long seconds) {
-		return Fallback.badGateway();
+		return null;
 	}
 
 	/**
@@ -32,6 +28,6 @@ public class RedisServiceFallback implements RedisService {
 	 */
 	@Override
 	public String get(String key) {
-		return Fallback.badGateway();
+		return null;
 	}
 }

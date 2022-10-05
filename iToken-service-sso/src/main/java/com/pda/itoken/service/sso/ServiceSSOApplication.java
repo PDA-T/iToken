@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 /**
  * 单点登陆
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.pda.itoken")// 设置包扫描路径
 @EnableEurekaClient// 启用eureka客户端(服务注册进eureka服务器)
 @EnableDiscoveryClient// 服务消费者(服务注册进eureka服务器)
 @EnableFeignClients// 启用Feign客户端

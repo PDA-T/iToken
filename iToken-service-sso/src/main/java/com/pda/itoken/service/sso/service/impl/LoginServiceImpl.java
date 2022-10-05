@@ -5,6 +5,8 @@ import com.pda.itoken.common.utils.MapperUtils;
 import com.pda.itoken.service.sso.mapper.TbSysUserMapper;
 import com.pda.itoken.service.sso.service.LoginService;
 import com.pda.itoken.service.sso.service.consumer.RedisService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -15,6 +17,9 @@ import tk.mybatis.mapper.entity.Example;
  */
 @Service
 public class LoginServiceImpl implements LoginService {
+
+	// 日志
+	private static final Logger LOGGER = LoggerFactory.getLogger(LoginServiceImpl.class);
 
 	// 用户
 	@Autowired
@@ -45,7 +50,7 @@ public class LoginServiceImpl implements LoginService {
 			// 加密密码
 			String password = DigestUtils.md5DigestAsHex(plantPassword.getBytes());
 			// 密码匹配
-			if (password.equals(tbSysUser.getPassword())){
+			if (tbSysUser != null && password.equals(tbSysUser.getPassword())){
 				try {
 					// 缓存新增用户信息
 					redisService.put(loginCode,MapperUtils.obj2json(tbSysUser),60*60*24);
@@ -62,7 +67,7 @@ public class LoginServiceImpl implements LoginService {
 			try {
 				tbSysUser = MapperUtils.json2pojo(json, TbSysUser.class);
 			} catch (Exception e) {
-				throw new RuntimeException(e);
+				LOGGER.warn("触发熔断:{}",e.getMessage());
 			}
 		}
 		return tbSysUser;
