@@ -66,6 +66,10 @@ public class LoginController {
 				}
 			}
 		}
+		// url传入页面
+		if (StringUtils.isNotBlank(url)){
+			model.addAttribute("url",url);
+		}
 		return "login";
 	}
 
@@ -105,5 +109,17 @@ public class LoginController {
 			}
 		}
 		return "redirect:/login";
+	}
+
+	/**
+	 * 注销
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value = "logout",method = RequestMethod.GET)
+	public String logout(HttpServletRequest request,HttpServletResponse response,@RequestParam(required = false) String url,Model model){
+		CookieUtils.deleteCookie(request,response,"token");
+		return login(url,request,model);
 	}
 }
