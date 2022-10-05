@@ -232,7 +232,7 @@ public final class CookieUtils {
 			final String[] domains = serverName.split("\\.");
 			int len = domains.length;
 			if (len > 3){
-				domainName = "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
+				domainName = domains[len - 4] + "." + domains[len - 3] + "." + domains[len - 2] + "." + domains[len - 1];
 			}else if (len <= 3 && len > 1){
 				domainName = "." + domains[len - 2] + "." + domains[len - 1];
 			}else {
