@@ -11,13 +11,4 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "iToken-service-admin",fallback = AdminServiceFallback.class)// 绑定iToken-service-admin服务,熔断回调类
 public interface AdminService {
-	/**
-	 * 登陆
-	 * @param loginCode
-	 * @param password
-	 * @return
-	 */
-	@RequestMapping(value = "login",method = RequestMethod.GET)
-	public String login(@RequestParam(value = "loginCode") String loginCode,
-						@RequestParam(value = "password") String password);
 }

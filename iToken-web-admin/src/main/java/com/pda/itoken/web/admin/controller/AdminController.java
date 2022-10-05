@@ -16,13 +16,11 @@ public class AdminController {
 	private AdminService adminService;
 
 	/**
-	 * 跳转登陆页
+	 * 跳转首页
 	 * @return
 	 */
-	@RequestMapping(value = {"","login"},method = RequestMethod.GET)
-	public String login(){
-		String login = adminService.login("", "");
-		System.out.println(login);
+	@RequestMapping(value = {"","index"},method = RequestMethod.GET)
+	public String index(){
 		return "index";
 	}
 }
