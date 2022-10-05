@@ -39,6 +39,6 @@ public class RedisController {
 		if (o != null){
 			return String.valueOf(o);
 		}
-		return "not_ok";
+		return null;
 	}
 }

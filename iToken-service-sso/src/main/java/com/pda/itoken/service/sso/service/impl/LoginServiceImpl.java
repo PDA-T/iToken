@@ -41,7 +41,7 @@ public class LoginServiceImpl implements LoginService {
 		// 查询登陆信息缓存
 		String json = redisService.get(loginCode);
 		// 缓存无用户信息
-		if (json == null || json.equals("not_ok")){
+		if (json == null){
 			// 条件构造器
 			Example example = new Example(TbSysUser.class);
 			example.createCriteria().andEqualTo("loginCode",loginCode);
