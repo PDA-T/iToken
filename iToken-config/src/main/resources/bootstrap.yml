@@ -7,7 +7,7 @@ spring:
       server:
         git:
           uri: https://github.com/PDA-T/iToken.git
-          search-paths: iToken-config/respo
+          search-paths: iToken-config-respo/respo
           username:
           password:
   boot:
