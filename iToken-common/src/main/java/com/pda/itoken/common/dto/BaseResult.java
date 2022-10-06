@@ -47,6 +47,16 @@ public class BaseResult implements Serializable {
 	}
 
 	/**
+	 * 分页成功
+	 * @param data
+	 * @param cursor
+	 * @return
+	 */
+	public static BaseResult ok(Object data,Cursor cursor){
+		return createResult(RESULT_OK,data,SUCCESS,cursor,null);
+	}
+
+	/**
 	 * 失败
 	 * @param errors
 	 * @return
