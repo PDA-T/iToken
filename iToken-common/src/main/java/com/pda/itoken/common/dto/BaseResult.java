@@ -38,6 +38,18 @@ public class BaseResult implements Serializable {
 	}
 
 	/**
+	 * @Author PDA
+	 * @Date 2022/10/9 19:01
+	 * @Description 字符串消息
+	 * @Param [success]
+	 * @Return com.pda.itoken.common.dto.BaseResult
+	 * @Since version-1.0
+	 */
+	public static BaseResult ok(String success){
+		return createResult(RESULT_OK,null,SUCCESS,null,null);
+	}
+
+	/**
 	 * 有参成功
 	 * @param data
 	 * @return
