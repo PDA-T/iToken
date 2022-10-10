@@ -1,5 +1,4 @@
 .idea
-**/*.iml
 
 /iToken-eureka/target/
 /iToken-config/target/
@@ -8,7 +7,6 @@
 /iToken-zuul/target/
 /iToken-service-admin/target/
 /iToken-common-service/target/
-/iToken-common-service/*.iml
 /iToken-common/target/
 /iToken-common-web/target/
 /itoken-common-domain/target/
