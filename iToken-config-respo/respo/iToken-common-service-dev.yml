@@ -7,6 +7,8 @@ spring:
         url: http://127.0.0.1:8084
 
 mybatis:
+  configuration:
+    cache-enabled: true
   type-aliases-package: com.pda.itoken.common.domain
   mapper-locations: classpath:mapper/*.xml
 
