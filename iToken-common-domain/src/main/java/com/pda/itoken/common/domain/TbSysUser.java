@@ -1,11 +1,16 @@
 package com.pda.itoken.common.domain;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "tb_sys_user")
-public class TbSysUser extends BaseDomain{
+public class TbSysUser extends BaseDomain implements Serializable {
+    /**
+     * 序列号
+     */
+    private static final long serialVersionUID = -9116961525984129600L;
+
     /**
      * 用户编码
      */

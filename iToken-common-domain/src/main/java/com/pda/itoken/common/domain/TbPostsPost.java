@@ -1,10 +1,16 @@
 package com.pda.itoken.common.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "tb_posts_post")
-public class TbPostsPost extends BaseDomain{
+public class TbPostsPost extends BaseDomain implements Serializable {
+    /**
+     * 序列号
+     */
+    private static final long serialVersionUID = 8136572237854663541L;
+
     /**
      * 文章编码
      */
