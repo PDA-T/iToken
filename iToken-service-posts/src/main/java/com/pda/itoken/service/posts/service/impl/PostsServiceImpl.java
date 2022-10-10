@@ -1,6 +1,5 @@
 package com.pda.itoken.service.posts.service.impl;
 
-import com.pda.itoken.common.domain.BaseDomain;
 import com.pda.itoken.common.domain.TbPostsPost;
 import com.pda.itoken.common.mapper.TbPostsPostMapper;
 import com.pda.itoken.common.service.impl.BaseServiceImpl;
