@@ -57,11 +57,11 @@ public class WebAdminInterceptor implements HandlerInterceptor {
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 		// 获取会话
 		HttpSession session = request.getSession();
-		TbSysUser tbSysUser = (TbSysUser) session.getAttribute("tbSysUser");
+		TbSysUser tbSysUser = (TbSysUser) session.getAttribute("admin");
 		// 已登陆
 		if (tbSysUser != null){
 			if (modelAndView != null){
-				modelAndView.addObject("tbSysUser",tbSysUser);
+				modelAndView.addObject("admin",tbSysUser);
 			}
 		}else {
 			// 未登录
@@ -76,10 +76,10 @@ public class WebAdminInterceptor implements HandlerInterceptor {
 						// 已登录状态
 						tbSysUser = MapperUtils.json2pojo(json, TbSysUser.class);
 						if (modelAndView != null){
-							modelAndView.addObject("tbSysUser",tbSysUser);
+							modelAndView.addObject("admin",tbSysUser);
 						}
 						// 放入局部会话
-						request.getSession().setAttribute("tbSysUser",tbSysUser);
+						request.getSession().setAttribute("admin",tbSysUser);
 					}
 				}
 			}
