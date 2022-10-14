@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: iToken-web-posts
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8084
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8602
+
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
