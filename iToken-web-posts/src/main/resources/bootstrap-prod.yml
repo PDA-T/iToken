@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://192.168.60.129:8888
+      name: iToken-web-posts,iToken-common-hosts
+      label: master
+      profile: prod
