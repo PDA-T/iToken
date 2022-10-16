@@ -27,4 +27,27 @@ public interface PostsService extends BaseClientService {
 	public String page(@PathVariable(required = true,value = "pageNum") int pageNum,
 					   @PathVariable(required = true,value = "pageSize") int pageSize,
 					   @PathVariable(required = false,value = "tbPostsPostJson") String tbPostsPostJson);
+
+	/**
+	 * @author PDA
+	 * @Date 2022/10/16 19:31
+	 * @Description id获取文章
+	 * @Param [postGuid]
+	 * @return java.lang.String
+	 * @since version-1.0
+	 */
+	@RequestMapping(value = "v1/posts/{postGuid}",method = RequestMethod.GET)
+	public String get(@PathVariable(required = true,value = "postGuid") String postGuid);
+
+	/**
+	 * @author PDA
+	 * @Date 2022/10/16 19:43
+	 * @Description 保存文章
+	 * @Param [tbPostsPostJson, optsBy]
+	 * @return java.lang.String
+	 * @since version-1.0
+	 */
+	@RequestMapping(value = "v1/posts",method = RequestMethod.POST)
+	public String save(@PathVariable(required = true,value = "tbPostsPostJson") String tbPostsPostJson,
+					   @PathVariable(required = true,value = "optsBy") String optsBy);
 }

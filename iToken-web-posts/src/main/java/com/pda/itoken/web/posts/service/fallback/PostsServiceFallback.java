@@ -24,4 +24,30 @@ public class PostsServiceFallback implements PostsService {
 	public String page(int pageNum, int pageSize, String tbPostsPostJson) {
 		return Fallback.badGateway();
 	}
+
+	/**
+	 * @author PDA
+	 * @Date 2022/10/16 19:39
+	 * @Description id获取熔断
+	 * @Param [postGuid]
+	 * @return java.lang.String
+	 * @since version-1.0
+	 */
+	@Override
+	public String get(String postGuid) {
+		return Fallback.badGateway();
+	}
+
+	/**
+	 * @author PDA
+	 * @Date 2022/10/16 19:44
+	 * @Description 新增熔断
+	 * @Param [tbPostsPostJson, optsBy]
+	 * @return java.lang.String
+	 * @since version-1.0
+	 */
+	@Override
+	public String save(String tbPostsPostJson, String optsBy) {
+		return Fallback.badGateway();
+	}
 }

@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author PDA
@@ -73,10 +74,11 @@ public class PostsController {
 		if (tbPostsPost != null){
 			// 新增
 			if (StringUtils.isBlank(tbPostsPost.getPostGuid())){
-				postsService.insert(tbPostsPost,optsBy);
+				tbPostsPost.setPostGuid(UUID.randomUUID().toString());
+				result = postsService.insert(tbPostsPost,optsBy);
 			}else {
 				// 修改
-				postsService.update(tbPostsPost,optsBy);
+				result = postsService.update(tbPostsPost,optsBy);
 			}
 			if (result > 0){
 				return BaseResult.ok("保存文章成功");
