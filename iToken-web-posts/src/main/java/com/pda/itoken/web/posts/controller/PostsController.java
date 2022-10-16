@@ -1,5 +1,8 @@
 package com.pda.itoken.web.posts.controller;
 
+import com.pda.itoken.common.domain.TbPostsPost;
+import com.pda.itoken.common.web.controller.BaseController;
+import com.pda.itoken.web.posts.service.PostsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @since version-1.0
  */
 @Controller
-public class PostsController {
+public class PostsController extends BaseController<TbPostsPost, PostsService> {
 	/**
 	 * @author PDA
 	 * @Date 2022/10/14 22:24
