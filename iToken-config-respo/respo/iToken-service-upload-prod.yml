@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: iToken-service-upload
+  zipkin:
+    base-url: http://192.168.60.129:9411
+  boot:
+    admin:
+      client:
+        url: http://192.168.60.129:8084
+
+fastdfs.base.url: http://192.168.60.129:8888/
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_service: 192.168.60.129:22122
+
+server:
+  port: 8505
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.60.129:8761/eureka/
