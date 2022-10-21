@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://192.168.60.129:8888
+      name: iToken-service-eureka,iToken-service-zipkin,iToken-service-admin,iToken-service-upload
+      label: master
+      profile: prod
