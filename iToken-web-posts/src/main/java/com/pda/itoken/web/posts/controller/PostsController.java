@@ -65,7 +65,19 @@ public class PostsController extends BaseController<TbPostsPost, PostsService> {
 	 * @return java.lang.String
 	 * @since version-1.0
 	 */
-	@RequestMapping(value = {"","index"},method = RequestMethod.GET)
+	@RequestMapping(value = {"","main"},method = RequestMethod.GET)
+	public String main(){
+		return "main";
+	}
+
+	/**
+	 * @author PDA
+	 * @Date 2022/10/28 19:03
+	 * @Description 跳转列表页
+	 * @return java.lang.String
+	 * @since version-1.0
+	 */
+	@RequestMapping(value = "index",method = RequestMethod.GET)
 	public String index(){
 		return "index";
 	}

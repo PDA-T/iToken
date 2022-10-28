@@ -16,4 +16,29 @@
 	<name>iToken-web-backend</name>
 	<url>http://www.1lin.xyz</url>
 	<inceptionYear>2022-Now</inceptionYear>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.pda</groupId>
+			<artifactId>iToken-common-web</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.pda.itoken.web.backend.WebBackendApplication</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
